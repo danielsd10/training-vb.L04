@@ -1,10 +1,11 @@
-﻿Imports ClasesLibreta
+﻿Imports System.ComponentModel
+Imports ClasesLibreta
 
 Public Class frmLista
-    Private lstContactos As List(Of Contacto)
+    Private lstContactos As BindingList(Of Contacto)
 
     Private Sub frmLista_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lstContactos = New List(Of Contacto)
+        lstContactos = New BindingList(Of Contacto)
 
         ' nuevo contacto
         Dim contacto As New Contacto()
@@ -24,6 +25,10 @@ Public Class frmLista
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        '
+        Dim frm As New frmNuevo
+        If frm.ShowDialog() = DialogResult.OK Then
+            lstContactos.Add(frm.NuevoContacto)
+        End If
+
     End Sub
 End Class
