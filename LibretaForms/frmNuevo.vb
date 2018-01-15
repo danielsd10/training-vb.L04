@@ -4,7 +4,7 @@ Public Class frmNuevo
     Public Property NuevoContacto As Contacto
 
     Private Sub frmNuevo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        NuevoContacto = New Contacto
+        NuevoContacto = New Persona
         txtNombre.DataBindings.Add(New Binding("Text", NuevoContacto, "Nombre"))
         txtApellido.DataBindings.Add(New Binding("Text", NuevoContacto, "Apellido"))
         txtDNI.DataBindings.Add(New Binding("Text", NuevoContacto, "DNI"))

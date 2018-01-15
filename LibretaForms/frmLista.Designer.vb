@@ -28,6 +28,7 @@ Partial Class frmLista
         Me.nombre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.apellido = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dni = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ruc = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.direccion = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.telefono = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.fecnac = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,7 +43,7 @@ Partial Class frmLista
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvLista.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombre, Me.apellido, Me.dni, Me.direccion, Me.telefono, Me.fecnac, Me.edad, Me.correo})
+        Me.dgvLista.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.nombre, Me.apellido, Me.dni, Me.ruc, Me.direccion, Me.telefono, Me.fecnac, Me.edad, Me.correo})
         Me.dgvLista.Location = New System.Drawing.Point(12, 41)
         Me.dgvLista.Name = "dgvLista"
         Me.dgvLista.Size = New System.Drawing.Size(575, 330)
@@ -74,6 +75,12 @@ Partial Class frmLista
         Me.dni.DataPropertyName = "DNI"
         Me.dni.HeaderText = "DNI"
         Me.dni.Name = "dni"
+        '
+        'ruc
+        '
+        Me.ruc.DataPropertyName = "RUC"
+        Me.ruc.HeaderText = "RUC"
+        Me.ruc.Name = "ruc"
         '
         'direccion
         '
@@ -127,6 +134,7 @@ Partial Class frmLista
     Friend WithEvents nombre As DataGridViewTextBoxColumn
     Friend WithEvents apellido As DataGridViewTextBoxColumn
     Friend WithEvents dni As DataGridViewTextBoxColumn
+    Friend WithEvents ruc As DataGridViewTextBoxColumn
     Friend WithEvents direccion As DataGridViewTextBoxColumn
     Friend WithEvents telefono As DataGridViewTextBoxColumn
     Friend WithEvents fecnac As DataGridViewTextBoxColumn

@@ -8,17 +8,25 @@ Public Class frmLista
         lstContactos = New BindingList(Of Contacto)
 
         ' nuevo contacto
-        Dim contacto As New Contacto()
-        contacto.Apellido = "Smith"
-        contacto.Nombre = "John"
-        contacto.DNI = "12345678"
-        contacto.Direccion = "Lima"
-        contacto.FechaNacimiento = #1/22/1995#
-        contacto.Telefono = "941399129"
-        contacto.Correo = "jsmith@ejemplo.com"
+        Dim persona As New Persona()
+        persona.Apellido = "Smith"
+        persona.Nombre = "John"
+        persona.DNI = "12345678"
+        persona.Direccion = "Lima"
+        persona.FechaNacimiento = #1/22/1995#
+        persona.Telefono = "941399129"
+        persona.Correo = "jsmith@ejemplo.com"
+
+        Dim empresa As New Empresa()
+        empresa.Nombre = "GMD"
+        empresa.RUC = "12345678"
+        empresa.Direccion = "Lima"
+        empresa.Telefono = "20991122"
+        empresa.Correo = "info@gmd.com.pe"
 
         'agregar contacto en lista
-        lstContactos.Add(contacto)
+        lstContactos.Add(persona)
+        lstContactos.Add(empresa)
 
         'vincular lista con DataGrid
         dgvLista.DataSource = lstContactos
